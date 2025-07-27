@@ -14,6 +14,34 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(23, 23, 23, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7877c6;
+  border-radius: 6px;
+  border: 2px solid rgba(23, 23, 23, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 119, 198, 0.8);
+}
+
+::selection {
+  background: #7877c6;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #7877c6;
+  color: #fff;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
