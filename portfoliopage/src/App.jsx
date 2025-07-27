@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { FaInstagram, FaTwitter, FaGithub, FaLinkedin, FaHome } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin, FaHome } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa';
-import { SiJavascript, SiReact, SiPython, SiTailwindcss, SiJira, SiNotion, SiVisualstudiocode, SiOpenai } from 'react-icons/si';
+import { SiJavascript, SiReact, SiPython, SiTailwindcss, SiJira, SiNotion, SiVisualstudiocode, SiOpenai, SiFastapi, SiFlask, SiSqlalchemy, SiCplusplus } from 'react-icons/si';
 
 function App() {
   const [isBottomReached, setIsBottomReached] = useState(false)
@@ -73,7 +74,7 @@ function App() {
         <div className="navbar-content">
           <div className="navbar-icons">
             <a href="https://www.instagram.com/nacho._.devita/" target="_blank" rel="noopener noreferrer" className="neon-icon"><FaInstagram /></a>
-            <a href="https://x.com/Nyacho__" target="_blank" rel="noopener noreferrer" className="neon-icon"><FaTwitter /></a>
+            <a href="https://x.com/Nyacho__" target="_blank" rel="noopener noreferrer" className="neon-icon"><FaXTwitter /></a>
             <a href="https://github.com/nyacho04" target="_blank" rel="noopener noreferrer" className="neon-icon"><FaGithub /></a>
             <a href="https://www.linkedin.com/in/idevita/" target="_blank" rel="noopener noreferrer" className="neon-icon"><FaLinkedin /></a>
           </div>
@@ -149,6 +150,112 @@ function App() {
               </a>
             </div>
           </div>
+          <div style={{ 
+            display: 'flex', 
+            gap: '0.3rem', 
+            justifyContent: 'flex-end', 
+            marginBottom: '1rem',
+            opacity: '0.7'
+          }}>
+            <div style={{ 
+              background: 'transparent', 
+              borderRadius: '6px', 
+              width: '20px', 
+              height: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              color: '#3776AB',
+              border: '1px solid rgba(55, 118, 171, 0.6)',
+              boxShadow: '0 0 4px rgba(55, 118, 171, 0.4)'
+            }}>
+              <SiPython style={{ fontSize: '12px' }} />
+            </div>
+            <div style={{ 
+              background: 'transparent', 
+              borderRadius: '6px', 
+              width: '20px', 
+              height: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              color: '#00D4AA',
+              border: '1px solid rgba(0, 212, 170, 0.6)',
+              boxShadow: '0 0 4px rgba(0, 212, 170, 0.4)'
+            }}>
+              <SiFastapi style={{ fontSize: '12px' }} />
+            </div>
+            <div style={{ 
+              background: 'transparent', 
+              borderRadius: '6px', 
+              width: '20px', 
+              height: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              color: '#61DAFB',
+              border: '1px solid rgba(97, 218, 251, 0.6)',
+              boxShadow: '0 0 4px rgba(97, 218, 251, 0.4)'
+            }}>
+              <SiReact style={{ fontSize: '12px' }} />
+            </div>
+            <div style={{ 
+              background: 'transparent', 
+              borderRadius: '6px', 
+              width: '20px', 
+              height: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              color: '#E34F26',
+              border: '1px solid rgba(227, 79, 38, 0.6)',
+              boxShadow: '0 0 4px rgba(227, 79, 38, 0.4)'
+            }}>
+              <FaHtml5 style={{ fontSize: '12px' }} />
+            </div>
+            <div style={{ 
+              background: 'transparent', 
+              borderRadius: '6px', 
+              width: '20px', 
+              height: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              color: '#1572B6',
+              border: '1px solid rgba(21, 114, 182, 0.6)',
+              boxShadow: '0 0 4px rgba(21, 114, 182, 0.4)'
+            }}>
+              <FaCss3Alt style={{ fontSize: '12px' }} />
+            </div>
+            <div style={{ 
+              background: 'transparent', 
+              borderRadius: '6px', 
+              width: '20px', 
+              height: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              color: '#F7DF1E',
+              border: '1px solid rgba(247, 223, 30, 0.6)',
+              boxShadow: '0 0 4px rgba(247, 223, 30, 0.4)'
+            }}>
+              <SiJavascript style={{ fontSize: '12px' }} />
+            </div>
+            <div style={{ 
+              background: 'transparent', 
+              borderRadius: '6px', 
+              width: '20px', 
+              height: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              color: '#10A37F',
+              border: '1px solid rgba(16, 163, 127, 0.6)',
+              boxShadow: '0 0 4px rgba(16, 163, 127, 0.4)'
+            }}>
+              <SiOpenai style={{ fontSize: '12px' }} />
+            </div>
+          </div>
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <button 
@@ -165,7 +272,8 @@ function App() {
                 transition: 'all 0.3s ease',
                 margin: '0 auto',
                 outline: 'none',
-                userSelect: 'none'
+                userSelect: 'none',
+                minWidth: '180px'
               }}
               onMouseEnter={(e) => {
                 e.target.style.background = 'rgba(120, 119, 198, 0.3)'
@@ -198,6 +306,70 @@ function App() {
             <p style={{ fontSize: '0.7rem', textAlign: 'left', marginTop: '0.5rem', color: 'rgb(239, 247, 175)' }}>
               You can visit the repository to learn more about the project by clicking in <a href="https://github.com/nazarena-aranda/holbertonschool-hbnb" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'rgb(239, 247, 175)' }}>this link</a>!
             </p>
+            <div style={{ 
+              display: 'flex', 
+              gap: '0.3rem', 
+              justifyContent: 'flex-end', 
+              marginBottom: '1rem',
+              opacity: '0.7'
+            }}>
+              <div style={{ 
+                background: 'transparent', 
+                borderRadius: '6px', 
+                width: '20px', 
+                height: '20px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                color: '#E34F26',
+                border: '1px solid rgba(227, 79, 38, 0.6)',
+                boxShadow: '0 0 4px rgba(227, 79, 38, 0.4)'
+              }}>
+                <FaHtml5 style={{ fontSize: '12px' }} />
+              </div>
+              <div style={{ 
+                background: 'transparent', 
+                borderRadius: '6px', 
+                width: '20px', 
+                height: '20px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                color: '#1572B6',
+                border: '1px solid rgba(21, 114, 182, 0.6)',
+                boxShadow: '0 0 4px rgba(21, 114, 182, 0.4)'
+              }}>
+                <FaCss3Alt style={{ fontSize: '12px' }} />
+              </div>
+              <div style={{ 
+                background: 'transparent', 
+                borderRadius: '6px', 
+                width: '20px', 
+                height: '20px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                color: '#808080',
+                border: '1px solid rgba(128, 128, 128, 0.6)',
+                boxShadow: '0 0 4px rgba(128, 128, 128, 0.4)'
+              }}>
+                <SiFlask style={{ fontSize: '12px' }} />
+              </div>
+              <div style={{ 
+                background: 'transparent', 
+                borderRadius: '6px', 
+                width: '20px', 
+                height: '20px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                color: '#3776AB',
+                border: '1px solid rgba(55, 118, 171, 0.6)',
+                boxShadow: '0 0 4px rgba(55, 118, 171, 0.4)'
+              }}>
+                <SiPython style={{ fontSize: '12px' }} />
+              </div>
+            </div>
             
             <h4 style={{ color: '#7877c6', marginBottom: '0.8rem', fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'left', fontFamily: 'Quicksand', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2rem' }}>
               <span>HolbertonSchool Simple Shell</span>
@@ -210,6 +382,28 @@ function App() {
             <p style={{ fontSize: '0.7rem', textAlign: 'left', marginTop: '0.5rem', color: 'rgb(239, 247, 175)' }}>
               You can visit the repository to learn more about the project by clicking in <a href="https://github.com/nyacho04/holbertonschool-simple_shell" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'rgb(239, 247, 175)' }}>this link</a>!
             </p>
+            <div style={{ 
+              display: 'flex', 
+              gap: '0.3rem', 
+              justifyContent: 'flex-end', 
+              marginBottom: '1rem',
+              opacity: '0.7'
+            }}>
+              <div style={{ 
+                background: 'transparent', 
+                borderRadius: '6px', 
+                width: '20px', 
+                height: '20px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                color: '#A8B9CC',
+                border: '1px solid rgba(168, 185, 204, 0.6)',
+                boxShadow: '0 0 4px rgba(168, 185, 204, 0.4)'
+              }}>
+                <SiCplusplus style={{ fontSize: '12px' }} />
+              </div>
+            </div>
             
             <h4 style={{ color: '#7877c6', marginBottom: '0.8rem', fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'left', fontFamily: 'Quicksand', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2rem' }}>
               <span>HolbertonSchool Printf</span>
@@ -222,6 +416,28 @@ function App() {
             <p style={{ fontSize: '0.7rem', textAlign: 'left', marginTop: '0.5rem', color: 'rgb(239, 247, 175)' }}>
               You can visit the repository to learn more about the project by clicking in <a href="https://github.com/nyacho04/holbertonschool-printf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'rgb(239, 247, 175)' }}>this link</a>!
             </p>
+            <div style={{ 
+              display: 'flex', 
+              gap: '0.3rem', 
+              justifyContent: 'flex-end', 
+              marginBottom: '1rem',
+              opacity: '0.7'
+            }}>
+              <div style={{ 
+                background: 'transparent', 
+                borderRadius: '6px', 
+                width: '20px', 
+                height: '20px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                color: '#A8B9CC',
+                border: '1px solid rgba(168, 185, 204, 0.6)',
+                boxShadow: '0 0 4px rgba(168, 185, 204, 0.4)'
+              }}>
+                <SiCplusplus style={{ fontSize: '12px' }} />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -235,7 +451,7 @@ function App() {
             <div style={{ flex: 1, textAlign: 'left' }}>
               <h3 style={{ color: '#7877c6', marginBottom: '0.8rem', fontFamily: 'Quicksand', fontSize: '1.2rem' }}>Who Am I?</h3>
               <p style={{ lineHeight: '1.5', marginBottom: '0.8rem', fontSize: '0.85rem' }}>
-                Hello! My name is <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>Ignacio Devita</span>, and I am 19 years old.
+                Hello! My name is <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>Ignacio Devita</span>, i from Uruguay and I am 19 years old.
               </p>
               <p style={{ lineHeight: '1.5', marginBottom: '0.8rem', fontSize: '0.85rem' }}>
                 I'm currently learning <span style={{ color: '#eff7af', fontWeight: 'bold' }}>code</span> and exploring <span style={{ color: '#eff7af', fontWeight: 'bold' }}>web design</span>.
@@ -252,7 +468,7 @@ function App() {
             </div>
             <div style={{ marginTop: isMobile ? '1rem' : '3.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <img 
-                src="./portfolio-1.webp" 
+                src="./aboutme.webp" 
                 alt="Nacho Devita" 
                 style={{ 
                   width: isMobile ? '250px' : '350px', 
