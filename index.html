@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Nani Portfolio</title>
+    <script type="module" crossorigin src="/assets/index-ENbhvUu3.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DJ5DZd0Q.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Set zoom to 133% on page load (desktop only)
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.innerWidth > 768) {
+          document.body.style.zoom = '133%';
+        }
+      });
+      
+      // Alternative method for browsers that don't support zoom (desktop only)
+      window.addEventListener('load', function() {
+        if (window.innerWidth > 768 && document.body.style.zoom === undefined) {
+          document.body.style.transform = 'scale(1.33)';
+          document.body.style.transformOrigin = 'top left';
+        }
+      });
+    </script>
+  </body>
+</html>
