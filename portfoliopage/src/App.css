@@ -228,15 +228,22 @@ body {
 
 .section-title {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 1rem;
   margin-left: -40px;
-  text-shadow: 0 0 8px #7877c6, 0 0 16px #fff;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 8px #7877c6,
+    0 0 16px #7877c6,
+    0 0 2px #fff;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3);
   align-self: center;
   font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
   width: 100%;
   max-width: 600px;
   text-align: left;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
 .glassmorphism-panel {
@@ -262,6 +269,14 @@ body {
     0 12px 40px 0 rgba(0, 0, 0, 0.5),
     0 6px 20px 0 rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.about-panel:hover {
+  background: rgba(23, 23, 23, 0.6);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.4),
+    0 4px 16px 0 rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .hero {

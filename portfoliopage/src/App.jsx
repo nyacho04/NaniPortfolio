@@ -82,16 +82,26 @@ function App() {
       </section>
       <section id="about" className="section">
         <div className="section-title">About Me</div>
-        <div className="glassmorphism-panel">
-          <h3 style={{ color: '#7877c6', marginBottom: '0.8rem', fontFamily: 'Quicksand', fontSize: '1.2rem' }}>Who I Am</h3>
-          <p style={{ lineHeight: '1.5', marginBottom: '0.8rem', fontSize: '0.95rem' }}>
-            I'm a passionate Software and Web Developer with experience in modern technologies. 
-            I love creating beautiful, functional, and user-friendly applications that solve real-world problems.
-          </p>
-          <p style={{ lineHeight: '1.5', fontSize: '0.95rem' }}>
-            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-            or sharing knowledge with the developer community.
-          </p>
+        <div className="glassmorphism-panel about-panel">
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+            <div style={{ flex: 1 }}>
+              <h3 style={{ color: '#7877c6', marginBottom: '0.8rem', fontFamily: 'Quicksand', fontSize: '1.2rem' }}>Who I Am</h3>
+              <p style={{ lineHeight: '1.5', marginBottom: '0.8rem', fontSize: '0.95rem' }}>
+                Passionate about continuous learning in the tech world, I strive to improve every day and expand my knowledge across different areas. I'm eager to get involved in both artistic and challenging projects, always bringing a creative and unique perspective. I also take pride in paying close attention to detail, ensuring quality and originality in everything I do.
+              </p>
+            </div>
+            <img 
+              src="/portfolio-1.webp" 
+              alt="Nacho Devita" 
+              style={{ 
+                width: '280px', 
+                height: '280px', 
+                borderRadius: '12px',
+                border: '1px solid rgba(120, 119, 198, 0.2)',
+                objectFit: 'cover'
+              }}
+            />
+          </div>
         </div>
       </section>
       <section id="tech" className="section">
