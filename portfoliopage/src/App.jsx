@@ -101,7 +101,7 @@ function App() {
                 Passionate about continuous learning in the tech world, I strive to improve every day and expand my knowledge across different areas.
               </p>
               <p style={{ lineHeight: '1.5', marginBottom: '0.8rem', fontSize: '0.85rem' }}>
-                I'm eager to get involved in both artistic and <span style={{ color: '#eff7af', fontWeight: 'bold' }}>challenging projects</span>, always bringing a <span style={{ color: '#eff7af', fontWeight: 'bold' }}>creative</span> and <span style={{ color: '#eff7af', fontWeight: 'bold' }}>unique perspective</span>.
+                I'm impatient to get involved in both artistic and <span style={{ color: '#eff7af', fontWeight: 'bold' }}>challenging projects</span>, always bringing a <span style={{ color: '#eff7af', fontWeight: 'bold' }}>creative</span> and <span style={{ color: '#eff7af', fontWeight: 'bold' }}>unique perspective</span>.
               </p>
               <p style={{ lineHeight: '1.5', marginBottom: '0.8rem', fontSize: '0.85rem' }}>
                 I also take pride in my <span style={{ color: '#eff7af', fontWeight: 'bold' }}>attention to detail</span>, ensuring quality and originality in everything I do.
