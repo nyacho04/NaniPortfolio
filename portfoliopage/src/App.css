@@ -49,27 +49,47 @@
   width: 100%;
   height: 100%;
   background-color: #171717;
-  background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120,119,198,0.3), rgba(255,255,255,0));
+  background-image: 
+    radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120,119,198,0.3), rgba(255,255,255,0)),
+    radial-gradient(circle at 50% 50%, rgba(120,119,198,0.15) 1px, transparent 1px);
+  background-size: 
+    100% 100%,
+    30px 30px;
+  background-position: 
+    0 0,
+    0 0;
 }
 
 .navbar-blur {
   position: fixed;
   top: 18px;
-  right: 40px;
-  transform: none;
+  left: 50%;
+  transform: translateX(95px);
   width: auto;
   max-width: none;
   min-width: unset;
   z-index: 10;
-  background: rgba(23, 23, 23, 0.15);
-  box-shadow: 0 2px 12px 0 rgba(120,119,198,0.10);
-  border-radius: 18px;
-  padding: 0.3rem 1.2rem;
-  height: 38px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    0 4px 16px 0 rgba(120, 119, 198, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 0.25rem 1.5rem;
+  height: 32px;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(4px) saturate(105%);
-  border: 1.5px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+}
+
+.navbar-blur:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 12px 40px 0 rgba(31, 38, 135, 0.45),
+    0 6px 20px 0 rgba(120, 119, 198, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .navbar-content {
@@ -83,17 +103,30 @@
 .navbar-home {
   position: fixed;
   top: 18px;
-  left: 40px;
+  left: 50%;
+  transform: translateX(-280px);
   z-index: 11;
-  background: rgba(23, 23, 23, 0.15);
-  box-shadow: 0 2px 12px 0 rgba(120,119,198,0.10);
-  border-radius: 18px;
-  padding: 0.3rem 1.2rem;
-  backdrop-filter: blur(4px) saturate(105%);
-  border: 1.5px solid rgba(255,255,255,0.10);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    0 4px 16px 0 rgba(120, 119, 198, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 0.25rem 1rem;
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
   align-items: center;
-  height: 38px;
+  height: 32px;
+  transition: all 0.3s ease;
+}
+
+.navbar-home:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 12px 40px 0 rgba(31, 38, 135, 0.45),
+    0 6px 20px 0 rgba(120, 119, 198, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .navbar-title {
@@ -143,11 +176,14 @@ body {
   text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: 'Nunito', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
   text-shadow:
     0 0 4px #fff,
     0 0 8px #7877c6,
-    0 0 16px #7877c6;
+    0 0 16px #7877c6,
+    0 0 2px #fff;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3);
+  text-stroke: 0.5px rgba(255, 255, 255, 0.3);
   letter-spacing: 2px;
   display: flex;
   align-items: center;
@@ -156,16 +192,19 @@ body {
 
 .subtitle {
   font-size: 1.1rem;
-  font-weight: 900;
+  font-weight: 700;
   color: #7877c6;
   text-align: center;
   margin-top: -8px;
   margin-bottom: 18px;
-  font-family: 'Nunito', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
   text-shadow:
     0 0 4px #4f4ea0,
     0 0 8px #5655ac,
-    0 0 16px #494897;
+    0 0 16px #494897,
+    0 0 1px #7877c6;
+  -webkit-text-stroke: 0.3px rgba(120, 119, 198, 0.4);
+  text-stroke: 0.3px rgba(120, 119, 198, 0.4);
   letter-spacing: 2px;
   display: flex;
   align-items: center;
@@ -173,25 +212,58 @@ body {
 }
 
 .section, .section-title {
-  font-family: 'Nunito', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .section {
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: #fff;
   font-size: 2rem;
   scroll-margin-top: 80px;
+  padding: 60px 60px 40px 60px;
+  position: relative;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: -40px;
   text-shadow: 0 0 8px #7877c6, 0 0 16px #fff;
+  align-self: center;
+  font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.glassmorphism-panel {
+  background: rgba(23, 23, 23, 0.6);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.4),
+    0 4px 16px 0 rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.glassmorphism-panel:hover {
+  background: rgba(23, 23, 23, 0.7);
+  box-shadow: 
+    0 12px 40px 0 rgba(0, 0, 0, 0.5),
+    0 6px 20px 0 rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .hero {
@@ -213,6 +285,50 @@ body {
   animation: bounce 1.5s infinite;
   text-align: center;
   cursor: pointer;
+  text-shadow: 
+    0 0 10px #7877c6,
+    0 0 20px #7877c6,
+    0 0 30px #7877c6;
+  transition: all 0.3s ease;
+}
+
+.scroll-down:hover {
+  color: #fff;
+  text-shadow: 
+    0 0 15px #fff,
+    0 0 30px #7877c6,
+    0 0 45px #7877c6,
+    0 0 60px #7877c6;
+  transform: scale(1.1);
+}
+
+.scroll-down.bottom-reached {
+  color: #fff;
+  text-shadow: 
+    0 0 15px #fff,
+    0 0 30px #7877c6,
+    0 0 45px #7877c6,
+    0 0 60px #7877c6,
+    0 0 75px #7877c6;
+  animation: glow-pulse 2s infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 15px #fff,
+      0 0 30px #7877c6,
+      0 0 45px #7877c6,
+      0 0 60px #7877c6;
+  }
+  50% {
+    text-shadow: 
+      0 0 20px #fff,
+      0 0 40px #7877c6,
+      0 0 60px #7877c6,
+      0 0 80px #7877c6,
+      0 0 100px #7877c6;
+  }
 }
 
 @keyframes bounce {
