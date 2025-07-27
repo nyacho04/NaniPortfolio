@@ -11,11 +11,11 @@ function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   
   const projectImages = [
-    '/1project-1.webp',
-    '/1project-2.webp', 
-    '/1project-3.webp',
-    '/1project-4.webp',
-    '/1project-5.webp'
+    './1project-1.webp',
+    './1project-2.webp', 
+    './1project-3.webp',
+    './1project-4.webp',
+    './1project-5.webp'
   ]
 
   useEffect(() => {
@@ -252,7 +252,7 @@ function App() {
             </div>
             <div style={{ marginTop: isMobile ? '1rem' : '3.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <img 
-                src="/portfolio-1.webp" 
+                src="./portfolio-1.webp" 
                 alt="Nacho Devita" 
                 style={{ 
                   width: isMobile ? '250px' : '350px', 
@@ -263,7 +263,7 @@ function App() {
                 }}
               />
               <p style={{ fontSize: '0.7rem', textAlign: 'center', marginTop: '1rem', color: 'rgb(239, 247, 175)' }}>
-                Do you want to learn more about me? download my CV <a href="/Ignacio Devita - CV en.pdf" download style={{ textDecoration: 'underline', color: 'rgb(239, 247, 175)' }}>here</a>!
+                Do you want to learn more about me? download my CV <a href="./Ignacio Devita - CV en.pdf" download style={{ textDecoration: 'underline', color: 'rgb(239, 247, 175)' }}>here</a>!
               </p>
             </div>
           </div>
