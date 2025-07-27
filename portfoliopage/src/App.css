@@ -183,7 +183,6 @@ body {
     0 0 16px #7877c6,
     0 0 2px #fff;
   -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3);
-  text-stroke: 0.5px rgba(255, 255, 255, 0.3);
   letter-spacing: 2px;
   display: flex;
   align-items: center;
@@ -204,7 +203,6 @@ body {
     0 0 16px #494897,
     0 0 1px #7877c6;
   -webkit-text-stroke: 0.3px rgba(120, 119, 198, 0.4);
-  text-stroke: 0.3px rgba(120, 119, 198, 0.4);
   letter-spacing: 2px;
   display: flex;
   align-items: center;
