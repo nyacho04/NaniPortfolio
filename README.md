@@ -14,6 +14,9 @@ https://nyacho04.github.io/NaniPortfolio/
 
 ## Color Palette
 #7877c6
+
 #171717
+
 #eff7af
+
 rgba(120, 119, 198, 0.2)
