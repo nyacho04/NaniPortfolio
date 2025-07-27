@@ -5,40 +5,127 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .hero {
+    min-height: 70vh;
+    padding-top: 100px;
+  }
+  
+  .neon-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section {
+    min-height: auto;
+    padding: 30px 20px 20px 20px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .glassmorphism-panel {
+    padding: 1rem;
+    margin-top: 0.3rem;
+  }
+  
+  .navbar-blur {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto;
+    padding: 0.2rem 1rem;
+    max-width: 90vw;
+    min-width: 180px;
+  }
+  
+  .navbar-home {
+    display: none !important;
+  }
+  
+  .about-panel .glassmorphism-panel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .about-panel img {
+    width: 250px !important;
+    height: 250px !important;
+    margin-top: 1rem !important;
+  }
+  
+  .tech-tools-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .tech-square-panel {
+    max-width: 100%;
+    aspect-ratio: auto;
+    min-height: 200px;
+  }
+  
+  .tech-square-panel > div {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+  
+  .scroll-down {
+    font-size: 1.5rem;
+    margin: 20px auto 0 auto;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .neon-title {
+    font-size: 2rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .about-panel img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  
+  .tech-square-panel > div {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.8rem !important;
+  }
+  
+  .tech-icon {
+    font-size: 1.8rem !important;
+  }
+  
+  .navbar-blur {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    max-width: 85vw;
+    min-width: 160px;
+    padding: 0.2rem 0.8rem;
+  }
+  
+  .navbar-home {
+    display: none !important;
+  }
 }
 
 .custom-bg {
@@ -129,14 +216,6 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.navbar-title {
-  font-size: 1.1rem;
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: 2px;
-  text-shadow: 0 0 8px #fff, 0 0 16px #fff;
-}
-
 .navbar-icons {
   display: flex;
   gap: 1rem;
@@ -214,7 +293,7 @@ body {
 }
 
 .section {
-  min-height: 60vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,7 +301,7 @@ body {
   color: #fff;
   font-size: 2rem;
   scroll-margin-top: 80px;
-  padding: 60px 60px 40px 60px;
+  padding: 40px 60px 30px 60px;
   position: relative;
 }
 
@@ -279,15 +358,6 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.tech-panel {
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 450px;
-  width: 100%;
-}
-
 .tech-tools-container {
   display: flex;
   gap: 2rem;
@@ -308,14 +378,14 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   z-index: 1;
-  padding-top: 200px;
+  padding-top: 150px;
 }
 
 .scroll-down {
@@ -377,7 +447,15 @@ body {
   50% { transform: translateY(16px); }
 }
 
-/* Estilos para los iconos de tecnologías */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .tech-icon-container {
   text-align: center;
   position: relative;
@@ -395,10 +473,10 @@ body {
 
 .tech-name {
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: 0.8rem;
   color: #fff;
   opacity: 0;
@@ -406,4 +484,28 @@ body {
   white-space: nowrap;
   pointer-events: none;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: rgba(120, 119, 198, 0.5);
+  font-size: 0.9rem;
+  font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  text-shadow: 0 0 4px rgba(120, 119, 198, 0.5);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 0.6rem;
+    font-size: 0.75rem;
+  }
 }
