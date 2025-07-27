@@ -1,75 +1,74 @@
 # 🎨 Color Palette - Nani Portfolio
 
-## Primary Colors
+## Core Colors
 
-### Purple (#7877c6)
+### Primary Purple
 - **Hex**: `#7877c6`
-- **Usage**: Main accent color, titles, highlights
-- **Examples**: Section titles, project dates, hover effects
+- **Usage**: Main accent color, text shadows, borders
 
-### White (#fff)
+### Pure White
 - **Hex**: `#fff`
-- **Usage**: Main text, icons, glows
-- **Examples**: Body text, navigation icons, text shadows
+- **Usage**: Main text, icons, highlights
 
-### Dark Background (#171717)
+### Dark Background
 - **Hex**: `#171717`
 - **Usage**: Page background
-- **Examples**: Main background, glassmorphism panels
 
-### Yellow Highlight (rgb(239, 247, 175))
-- **Hex**: `#eff7af`
-- **Usage**: Important text highlights
-- **Examples**: Project keywords, CV download link
+### Yellow Highlight
+- **Hex**: `rgb(239, 247, 175)`
+- **Usage**: Project keywords, links, CV download
 
-## Transparent Colors
+## Transparent Variants
 
-### Glassmorphism
-- **Panel Background**: `rgba(23, 23, 23, 0.6)`
-- **Navbar Background**: `rgba(255, 255, 255, 0.08)`
-- **Navbar Hover**: `rgba(255, 255, 255, 0.12)`
+### White Transparencies
+- `rgba(255, 255, 255, 0.08)` - Navbar background
+- `rgba(255, 255, 255, 0.12)` - Navbar hover
+- `rgba(255, 255, 255, 0.18)` - Navbar borders
+- `rgba(255, 255, 255, 0.1)` - Panel borders
 
-### Borders
-- **Main Border**: `rgba(255, 255, 255, 0.1)`
-- **Navbar Border**: `rgba(255, 255, 255, 0.18)`
+### Purple Transparencies
+- `rgba(120, 119, 198, 0.5)` - Footer text
+- `rgba(120, 119, 198, 0.2)` - Button background
+- `rgba(120, 119, 198, 0.3)` - Button hover
+- `rgba(120, 119, 198, 0.1)` - Image carousel background
 
-### Footer
-- **Footer Text**: `rgba(120, 119, 198, 0.5)` (50% transparent purple)
+### Dark Transparencies
+- `rgba(23, 23, 23, 0.6)` - Glassmorphism panels
 
 ## Technology Icons
 
-### Frontend
-- **HTML5**: `#E34F26`
-- **CSS3**: `#1572B6`
-- **JavaScript**: `#F7DF1E`
-- **React**: `#61DAFB`
-- **Tailwind**: `#06B6D4`
+### HTML5
+- **Color**: `#E34F26`
 
-### Backend & Tools
-- **Python**: `#3776AB`
-- **Git**: `#F05032`
-- **GitHub**: `#181717`
-- **Jira**: `#0052CC`
-- **VS Code**: `#007ACC`
-- **OpenAI**: `#10A37F`
-- **Notion**: `#000000`
+### CSS3
+- **Color**: `#1572B6`
 
-## Usage Examples
+### JavaScript
+- **Color**: `#F7DF1E`
 
-```css
-/* Main text */
-color: #fff;
+### React
+- **Color**: `#61DAFB`
 
-/* Accent text */
-color: #7877c6;
+### Python
+- **Color**: `#3776AB`
 
-/* Highlights */
-color: rgb(239, 247, 175);
+### Tailwind
+- **Color**: `#06B6D4`
 
-/* Background */
-background-color: #171717;
+### Git
+- **Color**: `#F05032`
 
-/* Glassmorphism */
-background: rgba(23, 23, 23, 0.6);
-border: 1px solid rgba(255, 255, 255, 0.1);
-```
+### GitHub
+- **Color**: `#181717`
+
+### Jira
+- **Color**: `#0052CC`
+
+### Notion
+- **Color**: `#000000`
+
+### VS Code
+- **Color**: `#007ACC`
+
+### OpenAI
+- **Color**: `#10A37F`
