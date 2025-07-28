@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { FaInstagram, FaGithub, FaLinkedin, FaHome, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin, FaHome, FaEnvelope, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa';
-import { SiJavascript, SiReact, SiPython, SiTailwindcss, SiJira, SiNotion, SiVisualstudiocode, SiOpenai, SiFastapi, SiFlask, SiSqlalchemy, SiCplusplus } from 'react-icons/si';
+import { SiJavascript, SiReact, SiPython, SiTailwindcss, SiJira, SiNotion, SiVisualstudiocode, SiOpenai, SiFastapi, SiFlask, SiCplusplus } from 'react-icons/si';
 
 function App() {
   const [isBottomReached, setIsBottomReached] = useState(false)
@@ -141,19 +140,25 @@ function App() {
                   cursor: 'pointer'
                 }}
               >
-                <img 
-                  src={projectImages[currentImageIndex]} 
-                  alt={`Charlotteo project ${currentImageIndex + 1}`}
-                  style={{ 
-                    width: '100%', 
-                    height: '100%', 
-                    objectFit: 'cover',
-                    animation: 'fadeIn 1s ease-out',
-                    userSelect: 'none',
-                    pointerEvents: 'none'
-                  }}
-                  key={currentImageIndex}
-                />
+                {projectImages.map((image, index) => (
+                  <img 
+                    key={image}
+                    src={image} 
+                    alt={`Charlotteo project ${index + 1}`}
+                    style={{ 
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%', 
+                      height: '100%', 
+                      objectFit: 'cover',
+                      userSelect: 'none',
+                      pointerEvents: 'none',
+                      opacity: index === currentImageIndex ? 1 : 0,
+                      transition: 'opacity 1s ease-out'
+                    }}
+                  />
+                ))}
               </a>
             </div>
           </div>
