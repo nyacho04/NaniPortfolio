@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { FaInstagram, FaGithub, FaLinkedin, FaHome } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin, FaHome, FaEnvelope } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa';
 import { SiJavascript, SiReact, SiPython, SiTailwindcss, SiJira, SiNotion, SiVisualstudiocode, SiOpenai, SiFastapi, SiFlask, SiSqlalchemy, SiCplusplus } from 'react-icons/si';
@@ -56,11 +56,15 @@ function App() {
   }, [])
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'center'
+          const element = document.getElementById(sectionId)
+      if (element) {
+        const offset = 15
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - offset
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       })
     }
   }
@@ -68,7 +72,7 @@ function App() {
   return (
     <>
       <div className="navbar-home">
-        <a href="#" className="neon-icon" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}><FaHome /></a>
+        <a href="#" className="neon-icon" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}><FaHome /></a>
       </div>
       <nav className="navbar-blur">
         <div className="navbar-content">
@@ -77,17 +81,18 @@ function App() {
             <a href="https://x.com/Nyacho__" target="_blank" rel="noopener noreferrer" className="neon-icon"><FaXTwitter /></a>
             <a href="https://github.com/nyacho04" target="_blank" rel="noopener noreferrer" className="neon-icon"><FaGithub /></a>
             <a href="https://www.linkedin.com/in/idevita/" target="_blank" rel="noopener noreferrer" className="neon-icon"><FaLinkedin /></a>
+            <a href="mailto:ignacio.devita.4@gmail.com" className="neon-icon"><FaEnvelope /></a>
           </div>
         </div>
       </nav>
       <div className="custom-bg"></div>
       <div id="hero" className="hero">
         <h1 className="neon-title">Hello World, I'm Nacho</h1>
-        <h2 className="subtitle">A Software and Web Developer</h2>
-        <a href="#projects" className={`scroll-down ${isBottomReached ? 'bottom-reached' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>↓</a>
+        <h2 className="subtitle" style={{ userSelect: 'none', pointerEvents: 'none' }}>A Software and Web Developer</h2>
+        <a href="#projects" className={`scroll-down ${isBottomReached ? 'bottom-reached' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }} style={{ userSelect: 'none' }}>↓</a>
       </div>
       <section id="projects" className="section">
-        <div className="section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', userSelect: 'none', pointerEvents: 'none' }}>
           <span>Projects</span>
           <span style={{ marginRight: '-30px' }}>&lt;&gt;</span>
         </div>
@@ -95,20 +100,20 @@ function App() {
           
           <h4 style={{ color: '#7877c6', marginBottom: '0.8rem', fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'left', fontFamily: 'Quicksand', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span>Charlotteo</span>
-            <span style={{ fontSize: '0.75rem', textDecoration: 'underline', color: '#7877c6' }}>May 2025 - July 2025</span>
+            {!isMobile && <span style={{ fontSize: '0.75rem', textDecoration: 'underline', color: '#7877c6', userSelect: 'none' }}>May 2025 - Jul 2025</span>}
           </h4>
           <p style={{ fontSize: '0.85rem', marginBottom: '0.8rem', textAlign: 'left', lineHeight: '1.5' }}>
             A chatbot-powered tool <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>using OpenAI to analyze VMware metrics</span>, generate technical reports, and provide contextual recommendations in natural language <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>improving troubleshooting and decision-making</span> in Cloud operations.
             <br /><br />
             I was responsible for the <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>frontend development, UI/UX design</span>, and chatbot testing.
             <br /><br />
-            This project was developed for a <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>real client: Willin</span>, a technology company seeking to optimize their Cloud infrastructure operations.
+            This project was developed for a <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>real client: </span><a href="https://willinn.io/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold', textDecoration: 'underline' }}>Willinn</a>, a technology company seeking to optimize their Cloud infrastructure operations.
             <br /><br />
-            It was presented at the <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>Celebra</span> building in <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>Zonamerica</span> as the final project for <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>Holberton School</span>.
+            It was presented at the <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>Celebra</span> building in <span style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold' }}>Zonamerica</span> as the final project for <a href="https://holbertonschool.uy/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(239, 247, 175)', fontWeight: 'bold', textDecoration: 'underline' }}>Holberton School</a>.
           </p>
           
           <p style={{ fontSize: '0.7rem', textAlign: 'left', marginBottom: '0.5rem', color: 'rgb(239, 247, 175)' }}>
-            You can visit our website to learn more about the project by clicking on any image!
+          You can visit our website or <a href="https://github.com/balemansteve/Charlotteo" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'rgb(239, 247, 175)' }}>repository</a> to learn more about the project by clicking any image!
           </p>
           
           <div style={{ 
@@ -143,7 +148,9 @@ function App() {
                     width: '100%', 
                     height: '100%', 
                     objectFit: 'cover',
-                    animation: 'fadeIn 0.6s ease-in-out'
+                    animation: 'fadeIn 1s ease-out',
+                    userSelect: 'none',
+                    pointerEvents: 'none'
                   }}
                   key={currentImageIndex}
                 />
@@ -261,8 +268,8 @@ function App() {
             <button 
               onClick={() => setShowMoreProjects(!showMoreProjects)}
               style={{
-                background: 'rgba(120, 119, 198, 0.2)',
-                border: '1px solid rgba(120, 119, 198, 0.4)',
+                background: 'rgba(120, 119, 198, 0.1)',
+                border: '1px solid rgba(120, 119, 198, 0.2)',
                 borderRadius: '8px',
                 padding: '0.5rem 1.2rem',
                 color: 'rgba(120, 119, 198, 0.8)',
@@ -276,11 +283,11 @@ function App() {
                 minWidth: '180px'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(120, 119, 198, 0.3)'
+                e.target.style.background = 'rgba(120, 119, 198, 0.2)'
                 e.target.style.transform = 'translateY(-2px)'
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'rgba(120, 119, 198, 0.2)'
+                e.target.style.background = 'rgba(120, 119, 198, 0.1)'
                 e.target.style.transform = 'translateY(0)'
               }}
             >
@@ -297,10 +304,10 @@ function App() {
           }}>
             <h4 style={{ color: '#7877c6', marginBottom: '0.8rem', fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'left', fontFamily: 'Quicksand', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span>AirBnB Clone API</span>
-              <span style={{ fontSize: '0.75rem', textDecoration: 'underline', color: '#7877c6' }}>Feb 2025 - Apr 2025</span>
+              {!isMobile && <span style={{ fontSize: '0.75rem', textDecoration: 'underline', color: '#7877c6', userSelect: 'none' }}>Feb 2025 - Apr 2025</span>}
             </h4>
             <p style={{ fontSize: '0.85rem', marginBottom: '0.8rem', textAlign: 'left', lineHeight: '1.5' }}>
-              Built a RESTful API using Flask for an AirBnB clone, featuring full CRUD operations, JWT authentication, and role-based access control. Refactored the codebase with Python.
+              I Built a RESTful API using Flask for an AirBnB clone, featuring full CRUD operations, JWT authentication, and role-based access control. Refactored the codebase with Python.
             </p>
             
             <p style={{ fontSize: '0.7rem', textAlign: 'left', marginTop: '0.5rem', color: 'rgb(239, 247, 175)' }}>
@@ -373,10 +380,10 @@ function App() {
             
             <h4 style={{ color: '#7877c6', marginBottom: '0.8rem', fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'left', fontFamily: 'Quicksand', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2rem' }}>
               <span>HolbertonSchool Simple Shell</span>
-              <span style={{ fontSize: '0.75rem', textDecoration: 'underline', color: '#7877c6' }}>Dec 2024 - Jan 2025</span>
+              {!isMobile && <span style={{ fontSize: '0.75rem', textDecoration: 'underline', color: '#7877c6', userSelect: 'none' }}>Dec 2024 - Jan 2025</span>}
             </h4>
             <p style={{ fontSize: '0.85rem', marginBottom: '0.8rem', textAlign: 'left', lineHeight: '1.5' }}>
-              This is a custom implementation of a "simple shell" in C, The project includes a set of functions like it allows you to manage variables, handle basic errors and execute commands.
+              This project is a custom implementation of a "simple shell" in C, The project includes a set of functions like it allows you to manage variables, handle basic errors and execute commands.
             </p>
             
             <p style={{ fontSize: '0.7rem', textAlign: 'left', marginTop: '0.5rem', color: 'rgb(239, 247, 175)' }}>
@@ -407,10 +414,10 @@ function App() {
             
             <h4 style={{ color: '#7877c6', marginBottom: '0.8rem', fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'left', fontFamily: 'Quicksand', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2rem' }}>
               <span>HolbertonSchool Printf</span>
-              <span style={{ fontSize: '0.75rem', textDecoration: 'underline', color: '#7877c6' }}>Nov 2024 - Dec 2025</span>
+              {!isMobile && <span style={{ fontSize: '0.75rem', textDecoration: 'underline', color: '#7877c6', userSelect: 'none' }}>Nov 2024 - Dec 2025</span>}
             </h4>
             <p style={{ fontSize: '0.85rem', marginBottom: '0.8rem', textAlign: 'left', lineHeight: '1.5' }}>
-              This _printf function is a simplified implementation of the standard printf function in C. this can be able to interpret and display text in the console based on the provided arguments.
+              This project is a simplified implementation of the standard printf function in C. this can be able to interpret and display text in the console based on the provided arguments.
             </p>
             
             <p style={{ fontSize: '0.7rem', textAlign: 'left', marginTop: '0.5rem', color: 'rgb(239, 247, 175)' }}>
@@ -442,7 +449,7 @@ function App() {
         </div>
       </section>
       <section id="about" className="section">
-        <div className="section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', userSelect: 'none', pointerEvents: 'none' }}>
           <span>About Me</span>
           <span style={{ marginRight: '-30px' }}>:)</span>
         </div>
@@ -466,7 +473,7 @@ function App() {
                 I also take pride in my <span style={{ color: '#eff7af', fontWeight: 'bold' }}>attention to detail</span>, ensuring quality and originality in everything I do.
               </p>
             </div>
-            <div style={{ marginTop: isMobile ? '1rem' : '3.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div style={{ marginTop: isMobile ? '0.5rem' : '3.3rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <img 
                 src="./aboutme.webp" 
                 alt="Nacho Devita" 
@@ -475,7 +482,9 @@ function App() {
                   height: isMobile ? '250px' : '350px', 
                   borderRadius: '25px',
                   objectFit: 'contain',
-                  objectPosition: 'top'
+                  objectPosition: 'top',
+                  userSelect: 'none',
+                  pointerEvents: 'none'
                 }}
               />
               <p style={{ fontSize: '0.7rem', textAlign: 'center', marginTop: '1rem', color: 'rgb(239, 247, 175)' }}>
@@ -486,8 +495,8 @@ function App() {
         </div>
       </section>
       <section id="tech" className="section">
-        <div className="section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <span>Technologies & Tools</span>
+        <div className="section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', userSelect: 'none', pointerEvents: 'none' }}>
+          <span>{isMobile ? 'Tools' : 'Technologies & Tools'}</span>
           <span style={{ marginRight: '-30px' }}>&lt;&gt;</span>
         </div>
         <div className="tech-tools-container" style={{ flexDirection: isMobile ? 'column' : 'row' }}>

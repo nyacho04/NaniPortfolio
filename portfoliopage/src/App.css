@@ -151,7 +151,7 @@
   position: fixed;
   top: 18px;
   left: 50%;
-  transform: translateX(95px);
+  transform: translateX(106px);
   width: auto;
   max-width: none;
   min-width: unset;
@@ -191,7 +191,7 @@
   position: fixed;
   top: 18px;
   left: 50%;
-  transform: translateX(-280px);
+  transform: translateX(-324px);
   z-index: 11;
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 
