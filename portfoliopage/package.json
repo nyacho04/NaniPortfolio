@@ -8,6 +8,7 @@
     "tailwind:init": "npx tailwindcss init -p",
     "dev": "vite",
     "build": "vite build",
+    "build:netlify": "vite build --base=/",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
