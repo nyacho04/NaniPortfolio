@@ -1,6 +1,6 @@
 ### Nani's portfolio :D
 
-https://nyacho04.github.io/NaniPortfolio/
+https://nyacho.site/
 
 ## Technologies Used
 
